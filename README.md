@@ -3,8 +3,15 @@
 
 Desenvolvido por: Valentim Uliana
 
-Essa aplicação tem como intuito fazer uma quarentena do IP dentro do FMC, e remover automáticamente. Porém é valido a partir da <b>versão 7.0 do FMC & FTD<b>
-
+Essa aplicação tem como intuito fazer uma quarentena do IP dentro do FMC, e remover automáticamente. Porém é valido a partir da <b>versão 7.0 do FMC & FTD</b>
+# Requisitos
+   Python(3.8+)<br>
+   FMC versão 7.0<br>
+   Na demonstração eu usei um Ubuntu server para rodas o script de Update, porém fica a seu critério! Basta ter python em uma maquina e com as bibliotecas instaladas<br>
+   Use: <b>pip install -r requirements.txt</b> para instalar as bibliotecas necessárias<br>
+   
+   <b>OBS: Essas bibliotecas são somente para o script de Update, o executável para envio dos IPs para quarentena não será necessário nenhum tipo de instalação.</b>
+   
 # Primeiros passos
 1. A aplicação é separada em dois scritps: o primeiro é o que faz o controle dos IPs em quarentena, para que ele possa ser removido no tempo correto, e é um script que fica sempre em produção; já o segundo é um executável que você envia as informações direto pro FMC através de uma interface gráfica amigável de de fácil uso.
 2. Para o uso nessas aplicações, é altamente recomendado que seja feita a criação de um usuário no FMC para fazer as requisições API.
@@ -22,7 +29,7 @@ Com o UUID em mãos, basta anotá-lo para não esquecer. Vamos fazer um HTTP req
 5. Pasta raiz da aplicação fica em <b>C:/uses/USERNAME/.cisco_quarantine_ips </b> porque nossa aplicação faz uso de imagens.
 
 # Como utilizar
-A aplicação vai trabalhar de modo inteligente fazendo todas as verificações e logando tudo para a pasta de logs da raiz da aplicação! Entre as verificações estão:
+A primeira coisa que devemos
 1. Se o CSV de Internal Networks foi preenchido corretamente, como citado <b>acima</b> a aplicação vai te informar que está incorreto, não permite o cadastro, e vai gerar um arquivo de log informando a linha do CSV que está incorreta! E também informa qualquer outro CSV que esteja incorreto.
 2. No cadastro de Internal Networks, a aplicação é capaz de fazer a verificação se um Ip/Prefixo está correto, se estiver incorreto um arquivo de log é gerado informando quais Ip's que não foram preenchidos corretamente. Lembrando que precisa ser um IP de rede para cadastro no Umbrella.
 3. A aplicação vai retornar mensagens em todos os casos, desde de, erros de configuração até quando tudo ocorreu bem e foram feitas as requisições!
