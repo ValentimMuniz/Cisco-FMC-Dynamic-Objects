@@ -14,8 +14,7 @@ Primeiro você encontra seu Domain UUID, como segue na imagem! Eu ja usei como b
 <img src="images/UUID.png"><br><br>
 
 Com o UUID em mãos, basta anotá-lo para não esquecer. Vamos fazer um HTTP requests de dentro do próprio FMC, para que possamos encontrar o ID do nosso objeto de quarentena. Para isso, dentro do api-explorer, vá em Objects e procure por <b>GET</b> Dynamic objects, clique em "Try it out" e logo em seguida em "Execute"
-imagem ReqDynamicObj, execute depois ojectID
-<img src="images/ReqDynamicObj.png"><br><br>
+<img src="images/ReqDynamicObj.png"><br><br><br>
 <img src="images/execute.png"><br><br>
    <b> Dentro do JSON tem um ID, esse é o ID do objeto<b>
 <img src="images/ObjectID.png"><br><br>
