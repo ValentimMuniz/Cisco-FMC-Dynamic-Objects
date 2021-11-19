@@ -11,10 +11,14 @@ Essa aplicação tem como intuito fazer uma quarentena do IP dentro do FMC, e re
 3. Para a aplicação de remoção e update de quarentena, você irá precisar do Domain UUID, e o ID do Dynamic Object, isso dentro do FMC. Para isso você precisa entrar na página de REST API do FMC que fica é <b> https://IP_DO_FMC_OU_FQDN/api/<u>api-explorer</u></b>. Segue imagens como guia.
 
 Primeiro você encontra seu Domain UUID, como segue na imagem! Eu ja usei como base o endpoint de Dynamic Objects na parte de Objects, mas o Domain UUID você consegue encontrá-lo em qualquer endpoit.
-imagem aqui
+<img src="images/UUID.png"><br><br>
 
 Com o UUID em mãos, basta anotá-lo para não esquecer. Vamos fazer um HTTP requests de dentro do próprio FMC, para que possamos encontrar o ID do nosso objeto de quarentena. Para isso, dentro do api-explorer, vá em Objects e procure por <b>GET</b> Dynamic objects, clique em "Try it out" e logo em seguida em "Execute"
 imagem ReqDynamicObj, execute depois ojectID
+<img src="images/ReqDynamicObj.png"><br><br>
+<img src="images/execute.png"><br><br>
+   <b> Dentro do JSON tem um ID, esse é o ID do objeto<b>
+<img src="images/ObjectID.png"><br><br>
 4. Pronto, com o Domain UUID, e o ObjectID em mãos, já estamos prontos para começar o uso da nossa aplicação.
 5. Pasta raiz da aplicação fica em <b>C:/uses/USERNAME/.cisco_quarantine_ips </b> porque nossa aplicação faz uso de imagens.
 
